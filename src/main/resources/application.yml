@@ -1,0 +1,33 @@
+server:
+  port: 9999
+  contextPath: /uaa
+
+facebook:
+  client:
+    clientId: 311268829332227
+    clientSecret: 94234865b0b04ae40e7cffbb505f7688
+    accessTokenUri: https://graph.facebook.com/oauth/access_token
+    userAuthorizationUri: https://www.facebook.com/dialog/oauth
+    tokenName: oauth_token
+    authenticationScheme: query
+    clientAuthenticationScheme: form
+  resource:
+    userInfoUri: https://graph.facebook.com/me
+google:
+  client:
+    clientId: 511345204395-llpl5kfdl10ilunufqretkipueqcqr2s.apps.googleusercontent.com
+    clientSecret: unE7OoGqS_chgYS-UQKud8qb
+    accessTokenUri: https://www.googleapis.com/oauth2/v4/token
+    userAuthorizationUri: https://accounts.google.com/o/oauth2/v2/auth
+    clientAuthenticationScheme: form
+    scope:
+      - openid
+      - email
+      - profile
+  resource:
+    userInfoUri: https://www.googleapis.com/oauth2/v3/userinfo
+    preferTokenInfo: true
+
+logging:
+  level:
+    org.springframework.security: DEBUG
